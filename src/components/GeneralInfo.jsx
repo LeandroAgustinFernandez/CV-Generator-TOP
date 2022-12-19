@@ -1,17 +1,10 @@
-import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-class GeneralInfo extends Component {
-  // eslint-disable-next-line no-useless-constructor
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const { handlerChangeInput, personalInfo } = this.props;
-    return (
-      <div>
+const GeneralInfo = (props) => {
+  const { handlerChangeInput, personalInfo } = props;
+  return (
+    <>
         <h3>Personal Information</h3>
         <Form>
           <Form.Group>
@@ -45,9 +38,8 @@ class GeneralInfo extends Component {
               value={personalInfo.description}/>
           </Form.Group>
         </Form>
-      </div>
-    );
-  }
+      </>
+  )
 }
 
-export default GeneralInfo;
+export default GeneralInfo
